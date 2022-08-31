@@ -1,8 +1,11 @@
 const sections = document.querySelectorAll("section");
+
+// This function will run at start in order to render the navigation bar to the template
 const initiateNavBar = () => {
   let listUI = "";
 
   const navbar = document.getElementById("navbar__list");
+
   for (let i = 0; i < sections.length; i++) {
     const sectionID = sections[i].id;
     const secNav = sections[i].dataset.nav;
@@ -13,7 +16,7 @@ const initiateNavBar = () => {
   }
   navbar.innerHTML = listUI;
 };
-
+// This function will activate rendering highlighting the section and the navigation tab of that section when the section is being viewed
 const activateSection = () => {
   for (let i = 0; i < sections.length; i++) {
     const navbarLinkId = document.getElementById(`menu__link${sections[i].id}`);
