@@ -17,9 +17,6 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-html {
-    scroll-behavior: smooth;
-  }
   
 
 /* Typeography General*/
@@ -84,8 +81,13 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    
 }
 
+.navbar__menu .menu__link a{
+    color: yellow
+    
+}
 .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;

@@ -12,9 +12,21 @@ const initiateNavBar = () => {
 
     listUI += `<li class="menu__link" id=${
       `menu__link` + sectionID
-    }><a href="#${sectionID}">${secNav}</a></li>`;
+    }><a >${secNav}</a></li>`;
   }
+
   navbar.innerHTML = listUI;
+  for (let i = 0; i < sections.length; i++) {
+    const handleNavBarOnClick = (event) => {
+      event.preventDefault();
+      document
+        .getElementById(`${sections[i].id}`)
+        .scrollIntoView({ behavior: "smooth" });
+    };
+    document
+      .getElementById(`menu__link${sections[i].id}`)
+      .addEventListener("click", handleNavBarOnClick);
+  }
 };
 // This function will activate rendering highlighting the section and the navigation tab of that section when the section is being viewed
 const activateSection = () => {
